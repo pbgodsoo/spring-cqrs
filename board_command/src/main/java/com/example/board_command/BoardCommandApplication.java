@@ -1,4 +1,4 @@
-package org.example.board_command;
+package com.example.board_command;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

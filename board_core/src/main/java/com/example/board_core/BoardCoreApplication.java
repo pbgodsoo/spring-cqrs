@@ -1,13 +1,13 @@
-package org.example.board_query;
+package com.example.board_core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BoardQueryApplication {
+public class BoardCoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BoardQueryApplication.class, args);
+        SpringApplication.run(BoardCoreApplication.class, args);
     }
 
 }
