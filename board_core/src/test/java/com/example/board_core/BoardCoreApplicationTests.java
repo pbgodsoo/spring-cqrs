@@ -1,10 +1,10 @@
-package org.example.board_command;
+package com.example.board_core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BoardCommandApplicationTests {
+class BoardCoreApplicationTests {
 
     @Test
     void contextLoads() {
