@@ -1,0 +1,23 @@
+jwt:
+  secret: sdfkhgsdkglnhoiurjdfoihgh397478thgwr390289gyrfhp90823uoevbdo823uvh4tf
+  expire: 300000
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: board_command
+              uri: http://localhost:8081
+              predicates:
+                - Path=/board/reg, /board/update, /board/delete
+              filters:
+                - JwtFilter
+            - id: board_query
+              uri: http://localhost:8082
+              predicates:
+                - Path=/board/list, /board/read/**
