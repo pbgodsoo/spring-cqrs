@@ -1,3 +1,6 @@
+jwt:
+  secret: sdfkhgsdkglnhoiurjdfoihgh397478thgwr390289gyrfhp90823uoevbdo823uvh4tf
+  expire: 300000
 
 spring:
   application:
@@ -12,7 +15,8 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/board/reg, /board/update, /board/delete
-
+              filters:
+                - JwtFilter
             - id: board_query
               uri: http://localhost:8082
               predicates:
