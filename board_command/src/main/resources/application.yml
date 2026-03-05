@@ -1,9 +1,20 @@
 server:
   port: 8081
 
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10     # 주소를 갱신하는 시간
+    lease-expiration-duration-in-seconds: 30  # 가져온 주소의 만료 시간
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9090/eureka
+    register-with-eureka: true  # 현재 자신의 IP주소를 유레카에 등록
+    fetch-registry: true        # 유레카에 등록된 주소들을 받아오는 것
+
 spring:
   application:
-    name: board_command
+    name: board-command
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
