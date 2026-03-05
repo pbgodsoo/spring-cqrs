@@ -21,3 +21,8 @@ spring:
               uri: http://localhost:8082
               predicates:
                 - Path=/board/list, /board/read/**
+
+            - id: origin
+              uri: http://localhost:8083
+              predicates:
+                - Path=/**
