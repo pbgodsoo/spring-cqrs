@@ -15,7 +15,11 @@ eureka:
 spring:
   application:
     name: board-command
-
+  kafka:
+    bootstrap-servers: 3.39.191.209:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.LongSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: ${DB_URL}
@@ -30,8 +34,8 @@ spring:
       hibernate:
         format_sql: true
 
-    logging:
-      level:
-        com.example.demo: debug
-        org.hibernate.SQL: debug
-        org.hibernate.orm.jdbc.bind: trace
+logging:
+  level:
+    com.example.board_command: debug
+    org.hibernate.SQL: debug
+    org.hibernate.orm.jdbc.bind: trace
